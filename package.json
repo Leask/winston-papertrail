@@ -1,6 +1,6 @@
 {
-  "name": "winston-papertrail",
-  "description": "A Papertrail transport for winston",
+  "name": "winston-3-papertrail",
+  "description": "A Papertrail transport for winston. Fork of http://github.com/kenperkins/winston-papertrail.git",
   "version": "1.0.5",
   "author": "Ken Perkins <ken.perkins@rackspace.com>",
   "repository": {
