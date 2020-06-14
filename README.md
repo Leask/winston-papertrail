@@ -1,20 +1,12 @@
-# winston-papertrail [![Build Status](https://secure.travis-ci.org/kenperkins/winston-papertrail.png?branch=master)](http://travis-ci.org/kenperkins/winston-papertrail) [![NPM version](https://badge.fury.io/js/winston-papertrail.png)](http://badge.fury.io/js/winston-papertrail)
-
 A Papertrail transport for [winston][0].
 
 ## Installation
 
-### Installing npm (node package manager)
-
-``` bash
-  $ curl http://npmjs.org/install.sh | sh
-```
-
-### Installing winston-papertrail
+### Installing winston-3-papertrail
 
 ``` bash
   $ npm install winston
-  $ npm install winston-papertrail
+  $ npm install winston-3-papertrail
 ```
 
 There are a few required options for logging to Papertrail:
@@ -26,7 +18,7 @@ There are a few required options for logging to Papertrail:
 ## Usage
 ```js
 const winston = require('winston');
-const { PapertrailConnection, PapertrailTransport } = require('winston-papertrail');
+const { PapertrailConnection, PapertrailTransport } = require('winston-3-papertrail');
 
 const papertrailConnection = new PapertrailConnection({
   host: 'logs.papertrailapp.com',
@@ -102,7 +94,7 @@ papertrailConnection.on('connect', () => {
 
 ### Colorization
 
-The `winston-papertrail` transport supports colorization with `winston`. Currently, the ANSI codes used for escape sequences are part of the search index, so please be advised when using colorization.
+The `winston-3-papertrail` transport supports colorization with `winston`. Currently, the ANSI codes used for escape sequences are part of the search index, so please be advised when using colorization.
 
 ```Javascript
 const logger = winston.createLogger({
@@ -118,11 +110,11 @@ logger.info('Hello from colorized winston');
 
 ### Closing the transport
 
-`winston-papertrail` transport supports closing the transport (and the underlying TLS connection) via the `PapertrailConnection#close` method. Thus, you can enable scenarios where your transport automatically closes when you close the `winston` logger.
+`winston-3-papertrail` transport supports closing the transport (and the underlying TLS connection) via the `PapertrailConnection#close` method. Thus, you can enable scenarios where your transport automatically closes when you close the `winston` logger.
 
 ```Javascript
 const winston = require('winston');
-const { PapertrailConnection, PapertrailTransport } = require('winston-papertrail');
+const { PapertrailConnection, PapertrailTransport } = require('winston-3-papertrail');
 
 const papertrailConnection = new PapertrailConnection({
   host: 'logs.papertrailapp.com',
@@ -139,6 +131,7 @@ papertrailConnection.on('connect', function() {
 });
 ```
 
-#### Author: [Ken Perkins](https://twitter.com/kenperkins)
+#### Package maintainer: [Nishkal Kashyap](https://github.com/nishkalkashyap)
+#### Original author: [Ken Perkins](https://twitter.com/kenperkins)
 
 [0]: https://github.com/flatiron/winston
