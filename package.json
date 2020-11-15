@@ -1,5 +1,5 @@
 {
-  "name": "winston-3-papertrail",
+  "name": "winston-papertrail-mproved",
   "description": "A Papertrail transport for winston. Fork of http://github.com/kenperkins/winston-papertrail.git",
   "version": "1.0.7",
   "author": "Nishkal Kashyap <hello@nishkal.in>",
